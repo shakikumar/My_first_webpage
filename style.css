@@ -1,0 +1,106 @@
+body {
+    margin: 0;
+    font-family: Arial;
+    background-color: white;
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 15px;   /* 🔽 reduced */
+    background: rgb(32, 58, 81);
+    color: white;
+}
+
+
+/* Menu */
+.menu {
+    display: none;
+    text-align: center;
+    padding: 10px;
+    background: #f2f2f2;
+}
+
+.menu button {
+    margin: 5px;
+    padding: 8px 12px;
+}
+
+/* Products Grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-auto-flow: dense;   /* ⭐ THIS IS THE FIX */
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+.item {
+    background: white;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.item img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    border-radius: 6px;
+}
+
+.item p {
+    margin: 8px 0 0;
+    font-size: 15px;
+    font-weight: 600;
+}
+
+
+
+/* Animation */
+
+/* Simple Hover Animation */
+.item {
+    transition: transform 0.3s ease; /* Smooth motion */
+}
+
+.item:hover {
+    transform: scale(1.05); /* Hover pannumpothu konjam perusagum */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+/* Table styling */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+.extra-content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+@keyframes zoom {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+.footer {
+    width: 100%;
+    padding: 25px 10px;
+    text-align: center;
+    background: rgb(32, 58, 81);
+    color: white;
+    font-size: 15px;
+}
